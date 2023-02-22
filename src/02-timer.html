@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown timer</title>
     <link rel="stylesheet" href="css/common.css" />
+
+    <style>
+      input {
+        background-color: #8f5280;
+        color: #fff;
+      }
+
+      button {
+        height: 30px;
+        width: 60px;
+        font-size: 20px;
+        border-radius: 5px;
+      
+        background-color: #ffffff;
+       
+      }
+
+      body {
+        text-align: center;
+        background: #d3b7b7;
+        font-family: sans-serif;
+        font-weight: 100;
+      }
+
+      .countdown {
+        font-family: sans-serif;
+        color: #fff;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .countdown-number {
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+
+      .countdown-time {
+        padding: 15px;
+        border-radius: 3px;
+        background: #8f5280;
+        display: inline-block;
+      }
+
+      .countdown-text {
+        display: block;
+        padding-top: 5px;
+        font-size: 16px;
+      }
+    </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
@@ -12,22 +63,22 @@
     <input type="text" id="datetime-picker" />
     <button type="button" data-start>Start</button>
 
-    <div class="timer">
-      <div class="field">
-        <span class="value" data-days>00</span>
-        <span class="label">Days</span>
+    <div class="timer countdown">
+      <div class="field countdown-number">
+        <span class="value countdown-time" data-days>00</span>
+        <span class="label countdown-text">Days</span>
       </div>
-      <div class="field">
-        <span class="value" data-hours>00</span>
-        <span class="label">Hours</span>
+      <div class="field countdown-number">
+        <span class="value countdown-time" data-hours>00</span>
+        <span class="label countdown-text">Hours</span>
       </div>
-      <div class="field">
-        <span class="value" data-minutes>00</span>
-        <span class="label">Minutes</span>
+      <div class="field countdown-number">
+        <span class="value countdown-time" data-minutes>00</span>
+        <span class="label countdown-text">Minutes</span>
       </div>
-      <div class="field">
-        <span class="value" data-seconds>00</span>
-        <span class="label">Seconds</span>
+      <div class="field countdown-number">
+        <span class="value countdown-time" data-seconds>00</span>
+        <span class="label countdown-text">Seconds</span>
       </div>
     </div>
 
