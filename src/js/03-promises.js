@@ -31,9 +31,9 @@ form.addEventListener('submit', startCreatePromise);
 function startCreatePromise(e) {
   e.preventDefault();
 
-  const valueAmount = Number(form.elements.namedItem('amount').value);
-  const valueStep = Number(form.elements.namedItem('step').value);
-  let valueDelay = Number(form.elements.namedItem('delay').value);
+  const valueAmount = form.elements.namedItem('amount').valueAsNumber;
+  const valueStep = form.elements.namedItem('step').valueAsNumber;
+  let valueDelay = form.elements.namedItem('delay').valueAsNumber;
 
   const id = setInterval(() => {
     position += 1;

@@ -3,13 +3,14 @@ const stopBtn = document.querySelector('[data-stop]');
 
 startBtn.addEventListener('click', onUpdateBgColor);
 stopBtn.addEventListener('click', onStopUpdateBgColor);
-let intervalId = 0
+let intervalId = 0;
+
 function onUpdateBgColor() {
-  return (intervalId = setInterval(() => {
-    (document.body.style.backgroundColor = `${getRandomHexColor()}`),
-      (startBtn.disabled = true);
+  intervalId = setInterval(() => {
+    document.body.style.backgroundColor = `${getRandomHexColor()}`;
+    startBtn.disabled = true;
     stopBtn.disabled = false;
-  }, 1000));
+  }, 1000);
 }
 
 function onStopUpdateBgColor() {
